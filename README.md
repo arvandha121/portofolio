@@ -12,7 +12,7 @@
 Demo website <a href="https://porto.arvandhaa.my.id/" target="_blank">Klik Disini</a>.
 
 ## Email & Password
-Email dan password tidak bisa dipakai di Demo Website, silahkan clone terlebih dahulu.
+Email and password cant be used on Demo Website, please clone first.
 
 Email: `admin@mail.id`
 Password: `Password#1234`
