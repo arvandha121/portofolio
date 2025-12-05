@@ -41,6 +41,9 @@
     {{-- Footer --}}
     @include('dashboard.layouts.partials.footer')
 
+    {{-- Mobile Menu --}}
+    @include('dashboard.layouts.partials.mobile-menu')
+
 </body>
 
 </html>

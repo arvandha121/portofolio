@@ -27,32 +27,9 @@
         </div>
 
         {{-- Modal --}}
-        <div id="imageModal"
-            class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 opacity-0 scale-95 pointer-events-none transition duration-300 ease-out"
-            onclick="closeImageModal()" style="cursor: auto">
-            <img id="modalImage"
-                class="max-w-full max-h-full rounded-lg shadow-lg transform transition duration-300 ease-in-out"
-                alt="Zoomed Image">
-        </div>
+        @include('dashboard.layouts.partials.modal-home-image')
+        
     </section>
 
-    <script>
-        function openImageModal(src) {
-            const modal = document.getElementById('imageModal');
-            const image = document.getElementById('modalImage');
-            image.src = src;
-            modal.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
-            modal.classList.add('opacity-100', 'scale-100');
-        }
-
-        function closeImageModal() {
-            const modal = document.getElementById('imageModal');
-            const image = document.getElementById('modalImage');
-            modal.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
-            modal.classList.remove('opacity-100', 'scale-100');
-            setTimeout(() => {
-                image.src = '';
-            }, 300); // biar smooth
-        }
-    </script>
+    <script src="{{ asset('js/home-modal-image.js') }}"></script>
 @endsection
