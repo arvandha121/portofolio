@@ -53,9 +53,9 @@
                                     class="w-full h-full object-cover transition duration-300 hover:scale-105">
                             </div>
                             <div class="space-y-2">
-                                <h3 class="text-lg font-semibold text-gray-800" x-text="project.title"></h3>
-                                <p class="text-sm text-indigo-600 font-medium" x-text="project.tipe"></p>
-                                <p class="text-sm text-gray-600 line-clamp-3" x-text="project.description"></p>
+                                <h3 class="porto text-lg font-semibold text-gray-800" x-text="project.title"></h3>
+                                <p class="porto text-sm text-indigo-600 font-medium" x-text="project.tipe"></p>
+                                <p class="porto text-sm text-gray-600 line-clamp-3" x-text="project.description"></p>
                             </div>
                         </div>
                     </template>

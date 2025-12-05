@@ -30,23 +30,23 @@
 
                         <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6 text-center mb-6 sm:mb-8">
                             <div class="rounded-xl p-3 sm:p-4 bg-white shadow-md border border-gray-100">
-                                <p class="text-2xl sm:text-3xl font-extrabold text-cyan-600">
+                                <p class="abt text-2xl sm:text-3xl font-extrabold text-cyan-600 dark:text-cyan-400">
                                     {{ str_pad($about->years_experience, 2, '0', STR_PAD_LEFT) }}+
                                 </p>
-                                <p class="text-xs sm:text-sm text-gray-600 italic mt-1">Years</p>
+                                <p class="abt text-xs sm:text-sm text-gray-600 italic mt-1">Years</p>
                             </div>
                             <div class="rounded-xl p-3 sm:p-4 bg-white shadow-md border border-gray-100">
-                                <p class="text-2xl sm:text-3xl font-extrabold text-cyan-600">
+                                <p class="abt text-2xl sm:text-3xl font-extrabold text-cyan-600 dark:text-cyan-400">
                                     {{ str_pad($about->certification_total, 2, '0', STR_PAD_LEFT) }}+
                                 </p>
-                                <p class="text-xs sm:text-sm text-gray-600 italic mt-1">Certificates</p>
+                                <p class="abt text-xs sm:text-sm text-gray-600 italic mt-1">Certificates</p>
                             </div>
                             <div
                                 class="rounded-xl p-3 sm:p-4 bg-white shadow-md border border-gray-100 col-span-2 sm:col-span-1">
-                                <p class="text-2xl sm:text-3xl font-extrabold text-cyan-600">
+                                <p class="abt text-2xl sm:text-3xl font-extrabold text-cyan-600 dark:text-cyan-400">
                                     {{ str_pad($about->companies_worked, 2, '0', STR_PAD_LEFT) }}+
                                 </p>
-                                <p class="text-xs sm:text-sm text-gray-600 italic mt-1">Companies</p>
+                                <p class="abt text-xs sm:text-sm text-gray-600 italic mt-1">Companies</p>
                             </div>
                         </div>
 

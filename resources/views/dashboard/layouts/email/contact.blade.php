@@ -3,7 +3,7 @@
 @section('content')
     <section class="contact-form-section">
         <div class="form-container">
-            <h2>Contact Me</h2>
+            <h2 class="contact">Contact Me</h2>
 
             @if (session('success'))
                 <div class="alert-success">

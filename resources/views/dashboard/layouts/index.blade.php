@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer-layouts.css') }}">
     <link rel="stylesheet" href="{{ asset('css/skill.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/darkmode.css') }}">
     <script src="{{ asset('js/main.js') }}"></script>
 </head>
 
@@ -43,7 +44,6 @@
 
     {{-- Mobile Menu --}}
     @include('dashboard.layouts.partials.mobile-menu')
-
 </body>
 
 </html>

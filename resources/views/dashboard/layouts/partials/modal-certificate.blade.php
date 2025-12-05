@@ -1,7 +1,7 @@
 <div class="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center" x-show="selectedCert" x-transition @click.self="selectedCert = null">
     <div class="bg-white rounded-2xl shadow-xl w-full max-w-2xl p-6 overflow-auto max-h-[90vh]" x-show="selectedCert" x-transition>
         <div class="flex justify-between items-start mb-4">
-            <h3 class="text-2xl font-bold text-cyan-700" x-text="selectedCert.title"></h3>
+            <h3 class="sertif text-2xl font-bold text-cyan-700" x-text="selectedCert.title"></h3>
             <button class="text-gray-500 hover:text-red-600" @click="selectedCert = null">✖</button>
         </div>
         <template x-if="selectedCert.details && selectedCert.details.length">
@@ -9,7 +9,7 @@
                 <template x-for="(detail, index) in selectedCert.details" :key="index">
                     <li class="border-b pb-4">
                         <h4 class="text-lg font-semibold text-gray-800" x-text="detail.subtitle"></h4>
-                        <p class="text-sm text-gray-600 mt-1" x-text="detail.description"></p>
+                        <p class="sertif text-sm text-gray-600 mt-1" x-text="detail.description"></p>
                         <template x-if="detail.link">
                             <a :href="detail.link" class="text-sm text-cyan-500 hover:underline mt-1"
                                 target="_blank">

@@ -1,0 +1,275 @@
+/* 🌙 DARK MODE GLOBAL */
+
+body.dark-mode {
+    background-color: #1e293b !important; /* slate-900 */
+    color: #e2e8f0 !important; /* gray-200 */
+}
+
+/* Navbar */
+body.dark-mode header,
+body.dark-mode nav {
+    background-color: #1e293b !important; /* slate-800 */
+    color: #e2e8f0 !important;
+}
+
+/* Text */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode span {
+    color: #e2e8f0 !important;
+}
+
+body.dark-mode p.abt {
+    color: #555555 !important;
+}
+
+body.dark-mode h3.skill {
+    color: #555555 !important;
+}
+
+body.dark-mode span.skill {
+    color: #555555 !important;
+}
+
+body.dark-mode p.skill {
+    color: #555555 !important;
+}
+
+body.dark-mode h3.sertif {
+    color: #505050 !important;
+}
+
+body.dark-mode span.sertif {
+    color: #555555 !important;
+}
+
+body.dark-mode p.sertif {
+    color: #555555 !important;
+}
+
+body.dark-mode h3.porto {
+    color: #3b3b3b !important;
+}
+
+body.dark-mode span.porto {
+    color: #555555 !important;
+}
+
+body.dark-mode p.porto {
+    color: #666666 !important;
+}
+
+body.dark-mode h2.contact {
+    color: #666666 !important;
+}
+
+/* Links */
+body.dark-mode a {
+    color: #38bdf8 !important; /* cyan-400 */
+}
+
+/* Buttons */
+body.dark-mode button,
+body.dark-mode .btn-contact {
+    background-color: #334155 !important;
+    color: #e2e8f0 !important;
+    border-color: #475569 !important;
+}
+
+body.dark-mode button:hover,
+body.dark-mode .btn-contact:hover {
+    background-color: #475569 !important; 
+}
+
+/* Cards, sections */
+body.dark-mode section,
+body.dark-mode .card,
+body.dark-mode .box {
+    background-color: #1e293b !important;
+    color: #e2e8f0 !important;
+}
+
+/* Footer */
+body.dark-mode footer {
+    background-color: #1e293b !important;
+    color: #e2e8f0 !important;
+}
+
+/* Social Icons */
+body.dark-mode .social-icons a {
+    background: #1e293b !important;
+    border-color: #334155 !important;
+}
+
+body.dark-mode .social-icons a:hover {
+    background: #334155 !important;
+}
+
+/* Inputs & Forms */
+body.dark-mode select {
+    background-color: #1e293b !important;
+    color: #e2e8f0 !important;
+    border-color: #334155 !important;
+}
+
+/* Modal */
+body.dark-mode .modal-content {
+    background-color: #1e293b !important;
+    color: #e2e8f0 !important;
+}
+
+/* 🌙 DARK MODE GLOBAL */
+
+body.dark-mode {
+    background-color: #1e293b !important; /* slate-900 */
+    color: #e2e8f0 !important; /* gray-200 */
+}
+
+/* Navbar */
+body.dark-mode header,
+body.dark-mode nav {
+    background-color: #1e293b !important; /* slate-800 */
+    color: #e2e8f0 !important;
+}
+
+/* Text */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode span {
+    color: #e2e8f0 !important;
+}
+
+body.dark-mode p.abt {
+    color: #555555 !important;
+}
+
+body.dark-mode h3.skill {
+    color: #555555 !important;
+}
+
+body.dark-mode span.skill {
+    color: #555555 !important;
+}
+
+body.dark-mode p.skill {
+    color: #555555 !important;
+}
+
+body.dark-mode h3.sertif {
+    color: #505050 !important;
+}
+
+body.dark-mode span.sertif {
+    color: #555555 !important;
+}
+
+body.dark-mode p.sertif {
+    color: #555555 !important;
+}
+
+body.dark-mode h3.porto {
+    color: #3b3b3b !important;
+}
+
+body.dark-mode span.porto {
+    color: #555555 !important;
+}
+
+body.dark-mode p.porto {
+    color: #666666 !important;
+}
+
+/* Links */
+body.dark-mode a {
+    color: #38bdf8 !important; /* cyan-400 */
+}
+
+/* Buttons */
+body.dark-mode button,
+body.dark-mode .btn-contact {
+    background-color: #334155 !important;
+    color: #e2e8f0 !important;
+    border-color: #475569 !important;
+}
+
+body.dark-mode button:hover,
+body.dark-mode .btn-contact:hover {
+    background-color: #475569 !important; 
+}
+
+/* Cards, sections */
+body.dark-mode section,
+body.dark-mode .card,
+body.dark-mode .box {
+    background-color: #1e293b !important;
+    color: #e2e8f0 !important;
+}
+
+/* Footer */
+body.dark-mode footer {
+    background-color: #1e293b !important;
+    color: #e2e8f0 !important;
+}
+
+/* Social Icons */
+body.dark-mode .social-icons a {
+    background: #1e293b !important;
+    border-color: #334155 !important;
+}
+
+body.dark-mode .social-icons a:hover {
+    background: #334155 !important;
+}
+
+/* Inputs & Forms */
+body.dark-mode select {
+    background-color: #1e293b !important;
+    color: #e2e8f0 !important;
+    border-color: #334155 !important;
+}
+
+/* Modal */
+body.dark-mode .modal-content {
+    background-color: #1e293b !important;
+    color: #e2e8f0 !important;
+}
+
+/* 🌙 Mobile Menu Dark Mode */
+body.dark-mode #mobileMenu {
+    background-color: #2f4466 !important; /* gelap tapi tidak merubah main bg */
+    color: #e2e8f0 !important;
+}
+
+body.dark-mode #mobileMenu a {
+    color: #e2e8f0 !important; /* teks link */
+}
+
+body.dark-mode #mobileMenu a:hover {
+    color: #38bdf8 !important; /* highlight saat hover */
+}
+
+body.dark-mode #mobileMenu i {
+    stroke: #e2e8f0 !important; /* icon feather gelap */
+}
+
+body.dark-mode #openMobileMenu {
+    background-color: #334155 !important;
+    color: #e2e8f0 !important;
+}
+
+body.dark-mode #openMobileMenu:hover {
+    background-color: #475569 !important;
+}
+
+body.dark-mode #closeMobileMenu {
+    color: #e2e8f0 !important;
+}
+
+body.dark-mode #closeMobileMenu:hover {
+    color: #f87171 !important; /* merah saat hover */
+}
+

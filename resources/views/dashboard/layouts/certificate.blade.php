@@ -12,8 +12,8 @@
                 @forelse ($certificates as $cert)
                     <div class="bg-white rounded-2xl shadow-md p-6 cursor-pointer hover:shadow-lg transition h-[150px]"
                         @click="selectedCert = {{ $cert->toJson() }}">
-                        <h3 class="text-xl font-semibold text-cyan-700 mb-2">{{ $cert->title }}</h3>
-                        <p class="text-sm text-gray-500">Click to see details</p>
+                        <h3 class="sertif text-xl font-semibold text-cyan-700 mb-2">{{ $cert->title }}</h3>
+                        <p class="sertif text-sm text-gray-500">Click to see details</p>
                     </div>
                 @empty
                     <div class="text-center text-gray-500 text-lg">
