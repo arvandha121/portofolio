@@ -29,6 +29,11 @@ Route::get('/portofolio', [DashboardController::class, 'portofolio'])->name('por
 
 Route::get('/login', [AuthController::class, 'loginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
+
+Route::get('/verify-otp', [AuthController::class, 'verifyOtpForm'])->name('verify.otp.form');
+Route::post('/verify-otp', [AuthController::class, 'verifyOtp'])->name('verify.otp');
+Route::get('/resend-otp', [AuthController::class, 'resendOtp'])->name('otp.resend');
+
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::middleware('custom.auth')->group(function () {
