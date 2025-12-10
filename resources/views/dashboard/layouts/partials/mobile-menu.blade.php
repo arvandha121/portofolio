@@ -9,34 +9,36 @@
 
     <div class="p-6">
         <div class="grid grid-cols-3 gap-6 text-center">
-
-            <a href="{{ route('home') }}" class="flex flex-col items-center {{ request()->is('/') ? 'text-cyan-600 font-semibold' : 'text-gray-700' }}">
+            <a href="{{ route('home') }}" 
+            class="menu-link flex flex-col items-center {{ request()->is('/') ? 'active-mobile' : '' }}">
                 <i data-feather="home"></i>
                 <span class="text-sm">Home</span>
             </a>
 
-            <a href="{{ route('about') }}" class="flex flex-col items-center {{ request()->is('about') ? 'text-cyan-600 font-semibold' : 'text-gray-700' }}">
+            <a href="{{ route('about') }}" 
+            class="menu-link flex flex-col items-center {{ request()->is('about') ? 'active-mobile' : '' }}">
                 <i data-feather="user"></i>
                 <span class="text-sm">About</span>
             </a>
 
-            <a href="{{ route('layoutskill') }}" class="flex flex-col items-center {{ request()->is('skill') ? 'text-cyan-600 font-semibold' : 'text-gray-700' }}">
+            <a href="{{ route('layoutskill') }}" 
+            class="menu-link flex flex-col items-center {{ request()->is('skill') ? 'active-mobile' : '' }}">
                 <i data-feather="activity"></i>
                 <span class="text-sm">Skills</span>
             </a>
 
-            <a href="{{ route('certification') }}" class="flex flex-col items-center {{ request()->is('certification') ? 'text-cyan-600 font-semibold' : 'text-gray-700' }}">
+            <a href="{{ route('certification') }}" 
+            class="menu-link flex flex-col items-center {{ request()->is('certification') ? 'active-mobile' : '' }}">
                 <i data-feather="award"></i>
                 <span class="text-sm">Certification</span>
             </a>
 
-            <a href="{{ route('portofolio') }}" class="flex flex-col items-center {{ request()->is('portofolio') ? 'text-cyan-600 font-semibold' : 'text-gray-700' }}">
+            <a href="{{ route('portofolio') }}" 
+            class="menu-link flex flex-col items-center {{ request()->is('portofolio') ? 'active-mobile' : '' }}">
                 <i data-feather="image"></i>
                 <span class="text-sm">Portfolio</span>
             </a>
-
         </div>
-
         <div class="text-right mt-6">
             <button id="closeMobileMenu" class="text-cyan-500 hover:text-red-500">
                 <i data-feather="x"></i>

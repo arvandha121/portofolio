@@ -183,22 +183,13 @@ body.dark-mode p.porto {
     color: #666666 !important;
 }
 
+body.dark-mode p.porto-tipe {
+    color: #4338ca !important;
+}
+
 /* Links */
 body.dark-mode a {
     color: #38bdf8 !important; /* cyan-400 */
-}
-
-/* Buttons */
-body.dark-mode button,
-body.dark-mode .btn-contact {
-    background-color: #334155 !important;
-    color: #e2e8f0 !important;
-    border-color: #475569 !important;
-}
-
-body.dark-mode button:hover,
-body.dark-mode .btn-contact:hover {
-    background-color: #475569 !important; 
 }
 
 /* Cards, sections */
@@ -238,31 +229,91 @@ body.dark-mode .modal-content {
     color: #e2e8f0 !important;
 }
 
-/* 🌙 Mobile Menu Dark Mode */
+/* ============================
+   MOBILE MENU BASE STYLE
+============================ */
+
+/* Link default (light mode) */
+.menu-link {
+    color: #475569; /* slate-600 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.menu-link i {
+    stroke: #1e293b; /* slate-800 */
+}
+
+/* Hover (light mode) */
+.menu-link:hover {
+    color: #0891b2;
+}
+
+.menu-link:hover i {
+    stroke: #0891b2;
+}
+
+/* ============================
+   ACTIVE STATE (Light Mode)
+============================ */
+.menu-link.active-mobile {
+    color: #0891b2 !important; /* cyan-600 */
+    font-weight: 600;
+}
+
+.menu-link.active-mobile i {
+    stroke: #0891b2 !important;
+}
+
+/* ============================
+   DARK MODE — BASE
+============================ */
 body.dark-mode #mobileMenu {
-    background-color: #2f4466 !important; /* gelap tapi tidak merubah main bg */
-    color: #e2e8f0 !important;
+    background-color: #1e293b !important; /* slate-800 */
+    color: #e2e8f0 !important; /* gray-200 */
 }
 
-body.dark-mode #mobileMenu a {
-    color: #e2e8f0 !important; /* teks link */
+body.dark-mode .menu-link {
+    color: #94a3b8 !important; /* slate-400 */
 }
 
-body.dark-mode #mobileMenu a:hover {
-    color: #38bdf8 !important; /* highlight saat hover */
+body.dark-mode .menu-link i {
+    stroke: #e2e8f0 !important; /* icon default white */
 }
 
-body.dark-mode #mobileMenu i {
-    stroke: #e2e8f0 !important; /* icon feather gelap */
+/* Hover (dark mode) */
+body.dark-mode .menu-link:hover {
+    color: #38bdf8 !important; /* sky-400 */
 }
 
+body.dark-mode .menu-link:hover i {
+    stroke: #38bdf8 !important;
+}
+
+/* ============================
+   ACTIVE STATE (Dark Mode)
+============================ */
+body.dark-mode .menu-link.active-mobile {
+    color: #38bdf8 !important; /* sky-400 */
+    font-weight: 600;
+}
+
+body.dark-mode .menu-link.active-mobile i {
+    stroke: #38bdf8 !important;
+}
+
+/* ============================
+   OPEN/CLOSE BUTTON (Dark Mode)
+============================ */
 body.dark-mode #openMobileMenu {
-    background-color: #334155 !important;
+    background-color: #334155 !important; /* slate-700 */
     color: #e2e8f0 !important;
 }
 
 body.dark-mode #openMobileMenu:hover {
-    background-color: #475569 !important;
+    background-color: #475569 !important; /* slate-600 */
 }
 
 body.dark-mode #closeMobileMenu {
@@ -270,6 +321,115 @@ body.dark-mode #closeMobileMenu {
 }
 
 body.dark-mode #closeMobileMenu:hover {
-    color: #f87171 !important; /* merah saat hover */
+    color: #f87171 !important;
 }
 
+/* ============================
+   PORTFOLIO BASE (LIGHT MODE)
+============================ */
+.portfolio-section {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.portfolio-title {
+    color: #1e293b; /* slate-800 */
+}
+
+.portfolio-subtitle {
+    color: #475569; /* slate-600 */
+}
+
+.portfolio-filter button {
+    background-color: #f1f5f9; /* slate-100 */
+    color: #475569;
+}
+
+.portfolio-filter button:hover {
+    background-color: #e2e8f0; /* slate-200 */
+}
+
+.portfolio-filter button.active {
+    background-color: #4f46e5; /* indigo-600 */
+    color: white;
+    box-shadow: 0 2px 8px rgba(79, 70, 229, 0.3);
+    transform: translateY(-2px); /* efek sedikit naik */
+}
+
+.portfolio-card {
+    background-color: white;
+    color: #1e293b;
+    transition: 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.portfolio-card img {
+    transition: 0.3s ease;
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.05);
+}
+
+/* ============================
+   DARK MODE PORTFOLIO FILTER
+============================ */
+
+/* Container */
+body.dark-mode .portfolio-filter {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Hover (Dark Mode) */
+body.dark-mode .portfolio-filter button:hover {
+    background: #334155; /* slate-700 */
+    color: white;
+}
+
+/* ACTIVE Button (Dark Mode)
+   — tetap ungu glow seperti light mode */
+body.dark-mode .portfolio-filter button.active {
+    background: linear-gradient(135deg, #6366f1, #4338ca);
+    transform: translateY(-2px); /* efek sedikit naik */
+}
+
+/* ============================
+   MODAL CLOSE BUTTON - LIGHT MODE
+============================ */
+.close-btn {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+
+    background: #f1f5f9; /* slate-100 */
+
+    border: none;
+    transition: 0.25s ease;
+}
+
+.close-btn:hover {
+    background: #e2e8f0; /* slate-200 */
+    color: #ef4444;      /* red-500 */
+}
+
+/* ============================
+   MODAL CLOSE BUTTON - DARK MODE
+============================ */
+body.dark-mode .close-btn {
+    background: #f1f5f9 !important;
+    color: #000 !important; 
+}
+
+body.dark-mode .close-btn:hover {
+    background: #e2e8f0 !important; /* slate-600 */
+    color: #f87171 !important;       /* red-400 */
+}

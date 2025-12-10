@@ -4,7 +4,11 @@
 
             <!-- Logo -->
             <a href="{{ route('home') }}" class="flex items-center">
-                <img src="{{ asset('images/logo-icon.png') }}" class="h-8 w-8" alt="Logo">
+                <img id="mainLogo"
+                src="{{ asset('images/logo-icon.webp') }}"
+                data-light="{{ asset('images/logo-icon.webp') }}"
+                data-dark="{{ asset('images/logo-icon-white.webp') }}"
+                class="h-8 w-8">
             </a>
 
             <!-- Desktop Menu -->
@@ -38,8 +42,10 @@
 
             <!-- Dark Mode Toggle -->
             <button id="toggleDarkMode" 
-                    class="p-2 rounded-full bg-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition">
-                <i id="themeIcon" data-feather="moon" class="w-5 h-5"></i>
+                class="p-2 rounded-full bg-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition">
+                <span id="themeIconWrapper">
+                    <i data-feather="moon" class="w-5 h-5"></i>
+                </span>
             </button>
         </div>
     </div>

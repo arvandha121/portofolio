@@ -1,69 +1,82 @@
 @extends('dashboard.layouts.index')
 
 @section('content')
-    <section class="flex justify-center pt-8 pb-16 px-4" x-data="{
+<link rel="stylesheet" href="/css/portfolio.css">
+
+<section 
+    class="portfolio-section flex justify-center px-4"
+    x-data="{
         selectedProject: null,
         selectedType: 'all',
         projects: {{ $projects->toJson() }},
         get filteredProjects() {
-            return this.selectedType === 'all' ?
-                this.projects :
-                this.projects.filter(p => p.tipe === this.selectedType);
+            return this.selectedType === 'all'
+                ? this.projects
+                : this.projects.filter(p => p.tipe === this.selectedType)
         },
         uniqueTypes() {
-            const types = this.projects.map(p => p.tipe);
-            return ['all', ...new Set(types)];
+            const t = this.projects.map(p => p.tipe);
+            return ['all', ...new Set(t)];
         }
-    }" x-init="$watch('selectedType', () => { selectedProject = null })">
-        <div class="w-full max-w-7xl mx-auto">
+    }"
+>
+    <div class="w-full max-w-7xl mx-auto">
 
-            {{-- Heading --}}
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4 mt-10">My Portfolios</h2>
-            <p class="text-center text-gray-600 text-base md:text-lg mb-8 leading-relaxed">
-                Below are some of my personal or professional portfolio projects.
-            </p>
+        {{-- Title --}}
+        <h2 class="portfolio-title text-3xl md:text-4xl font-bold text-center mb-4 mt-10">
+            My Portfolios
+        </h2>
+        <p class="portfolio-subtitle text-center text-base md:text-lg mb-8 leading-relaxed">
+            Below are some of my personal or professional portfolio projects.
+        </p>
 
-            {{-- Filter Buttons --}}
-            <div class="flex flex-wrap justify-center gap-3 mb-10 px-2 overflow-x-auto">
-                <template x-for="type in uniqueTypes()" :key="type">
-                    <button
-                        class="px-4 py-2 rounded-full text-sm font-medium transition duration-200 ease-in-out whitespace-nowrap"
-                        :class="selectedType === type ? 'bg-indigo-600 text-white shadow' :
-                            'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-black'"
-                        x-text="type === 'all' ? 'Semua' : type" @click="selectedType = type">
-                    </button>
-                </template>
-            </div>
-
-            {{-- If no projects --}}
-            <template x-if="filteredProjects.length === 0">
-                <div class="text-center text-gray-500 text-lg">
-                    No portfolio projects available for selected filter.
-                </div>
+        {{-- Filter --}}
+        <div class="portfolio-filter flex flex-wrap justify-center gap-3 mb-10 px-2">
+            <template x-for="type in uniqueTypes()" :key="type">
+                <button
+                    class="px-4 py-2 rounded-full text-sm font-medium transition duration-200 whitespace-nowrap"
+                    :class="selectedType === type ? 'active' : ''"
+                    x-text="type === 'all' ? 'Semua' : type"
+                    @click="selectedType = type"
+                ></button>
             </template>
+        </div>
 
-            {{-- Portfolio Cards --}}
-            <div class="flex justify-center">
-                <div class="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full px-2 sm:px-0">
-                    <template x-for="project in filteredProjects" :key="project.id">
-                        <div class="bg-white rounded-xl shadow-md hover:shadow-lg hover:scale-[1.02] transition-transform duration-300 cursor-pointer p-4"
-                            @click="selectedProject = project">
-                            <div class="aspect-[3/2] overflow-hidden rounded-lg mb-3">
-                                <img :src="'/storage/' + project.image" alt=""
-                                    class="w-full h-full object-cover transition duration-300 hover:scale-105">
-                            </div>
-                            <div class="space-y-2">
-                                <h3 class="porto text-lg font-semibold text-gray-800" x-text="project.title"></h3>
-                                <p class="porto text-sm text-indigo-600 font-medium" x-text="project.tipe"></p>
-                                <p class="porto text-sm text-gray-600 line-clamp-3" x-text="project.description"></p>
-                            </div>
+        {{-- Empty State --}}
+        <template x-if="filteredProjects.length === 0">
+            <div class="text-center text-gray-500 text-lg">
+                No portfolio projects available.
+            </div>
+        </template>
+
+        {{-- Portfolio Cards --}}
+        <div class="flex justify-center">
+            <div class="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full px-2 sm:px-0">
+
+                <template x-for="project in filteredProjects" :key="project.id">
+                    <div class="portfolio-card rounded-xl shadow-md p-4 cursor-pointer"
+                        @click="selectedProject = project">
+
+                        <div class="aspect-[3/2] overflow-hidden rounded-lg mb-3">
+                            <img :src="'/storage/' + project.image" alt=""
+                                class="w-full h-full object-cover">
                         </div>
-                    </template>
-                </div>
+
+                        <div class="space-y-2">
+                            <h3 class="porto text-lg font-semibold" x-text="project.title"></h3>
+                            <p class="porto-tipe text-sm text-indigo-600 font-medium" x-text="project.tipe"></p>
+                            <p class="porto text-sm line-clamp-3" x-text="project.description"></p>
+                        </div>
+
+                    </div>
+                </template>
+
             </div>
         </div>
 
-        {{-- Modal --}}
-        @include('dashboard.layouts.partials.modal-portofolio')
-    </section>
+    </div>
+
+    {{-- Modal --}}
+    @include('dashboard.layouts.partials.modal-portofolio')
+</section>
 @endsection

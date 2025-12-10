@@ -2,7 +2,7 @@
     <div class="bg-white rounded-2xl shadow-xl w-full max-w-2xl p-6 overflow-auto max-h-[90vh]" x-show="selectedCert" x-transition>
         <div class="flex justify-between items-start mb-4">
             <h3 class="sertif text-2xl font-bold text-cyan-700" x-text="selectedCert.title"></h3>
-            <button class="text-gray-500 hover:text-red-600" @click="selectedCert = null">✖</button>
+            <button class="close-btn text-gray-500 hover:text-red-600" @click="selectedCert = null">✖</button>
         </div>
         <template x-if="selectedCert.details && selectedCert.details.length">
             <ul class="space-y-6">
